@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary SEO -->
+  <title>Xi-kki — AI Agent & Web3 Builder | Adeleke Isaac</title>
+  <meta name="description"
+    content="Xi-kki (Adeleke Isaac) builds AI agents, Web3 protocols, and foodtech tools for Africa. Creator of VERIDD, The Xikki Brief, and @Paiye_Bot.">
+  <meta name="keywords"
+    content="Xi-kki, Adeleke Isaac, AI agent developer, Web3 builder, VERIDD, The Xikki Brief, Paiye_Bot, foodtech AI, Nigeria, 0G, Sui blockchain">
+  <meta name="author" content="Adeleke Isaac (Xi-kki)">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://xi-kki.github.io">
+  <meta property="og:title" content="Xi-kki — AI Agent & Web3 Builder">
+  <meta property="og:description"
+    content="Building AI agents, Web3 protocols, and foodtech tools for Africa.">
+  <meta property="og:image" content="https://xi-kki.github.io/images/og.jpg">
+  <meta property="og:site_name" content="Xi-kki">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@xikkibrief">
+  <meta name="twitter:creator" content="@xikkibrief">
+  <meta name="twitter:title" content="Xi-kki — AI Agent & Web3 Builder">
+  <meta name="twitter:description"
+    content="Building AI agents, Web3 protocols, and foodtech tools for Africa.">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adeleke Isaac",
+    "alternateName": "Xi-kki",
+    "url": "https://xi-kki.github.io",
+    "jobTitle": "AI Agent & Web3 Builder",
+    "description": "Building AI agents, Web3 protocols, and foodtech tools for Africa.",
+    "nationality": "Nigerian",
+    "knowsAbout": [
+      "AI Agents", "Web3", "Blockchain", "Prompt Engineering",
+      "Smart Contracts", "Sui", "0G", "DeFi",
+      "Foodtech", "Machine Learning", "Vibe Coding"
+    ],
+    "sameAs": [
+      "https://github.com/xi-kki",
+      "https://thexikkibrief.substack.com",
+      "https://x.com/xikkibrief"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#home">XK</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <a class="nav-cta" href="https://github.com/xi-kki" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <div class="hero-overline">
+            <span class="pulse-dot"></span>
+            <span id="typewriter" class="typewriter-text"></span>
+          </div>
+          <h1 class="hero-name">Xi-kki</h1>
+          <p class="hero-bio">AI Agent & Web3 Builder. Creating onchain reputation systems, AI-powered tools, and foodtech solutions — starting with Africa.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
+            <a href="#contact" class="btn btn-ghost magnetic">Get in touch →</a>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Zero Cup 2026 — VERIDD</span>
+            </div>
+            <div class="proof-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <span>The Xikki Brief — 5K+ readers</span>
+            </div>
+            <div class="proof-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>@Paiye_Bot — Job Match Engine</span>
+            </div>
+          </div>
+          <div class="scroll-indicator">
+            <span>Scroll</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-right">
+          <div class="hero-photo-frame">
+            <div class="hero-avatar-placeholder">
+              <span class="avatar-initials">XK</span>
+            </div>
+          </div>
+          <div class="hero-photo-badge badge-primary">
+            <span class="badge-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </span>
+            AI Agent Builder
+          </div>
+          <div class="hero-photo-badge badge-secondary">
+            <span class="badge-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </span>
+            Web3 Developer
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Built With ===== -->
+  <section class="media-section">
+    <div class="container">
+      <p class="media-label">Building With</p>
+      <div class="media-strip">
+        <span class="tech-logo">Solidity</span>
+        <span class="tech-logo">Move</span>
+        <span class="tech-logo">TypeScript</span>
+        <span class="tech-logo">React</span>
+        <span class="tech-logo">Python</span>
+        <span class="tech-logo">Node.js</span>
+        <span class="tech-logo">0G</span>
+        <span class="tech-logo">Sui</span>
+        <span class="tech-logo">OpenAI</span>
+        <span class="tech-logo">Prompt Eng</span>
+        <span class="tech-logo">Tailwind</span>
+        <span class="tech-logo">ethers.js</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Projects</p>
+        <h2>What I'm Building</h2>
+        <p class="section-desc">AI agents, Web3 protocols, foodtech tools, and content — shipping across the stack.</p>
+      </div>
+
+      <div class="ventures-grid">
+
+        <!-- VERIDD -->
+        <div class="venture-card featured reveal tilt-card">
+          <div class="venture-meta">
+            <span class="venture-status status-live">Live</span>
+            &nbsp;·&nbsp; 0G Zero Cup 2026
+          </div>
+          <h3>VERIDD</h3>
+          <p>Onchain reputation score for AI agents. Built on 0G with Agentic ID (ERC-7857), peer review via 0G Compute, and immutable action logs on 0G Storage. Winner of 0G Zero Cup.</p>
+          <div class="venture-tags">
+            <span>Solidity</span>
+            <span>0G Chain</span>
+            <span>0G Storage</span>
+            <span>0G Compute</span>
+            <span>React</span>
+            <span>ERC-721</span>
+          </div>
+          <div class="venture-links">
+            <a href="https://veridd.vercel.app" target="_blank" class="venture-link">Live Demo →</a>
+            <a href="https://github.com/xi-kki/veridd" target="_blank" class="venture-link-gh">GitHub</a>
+          </div>
+        </div>
+
+        <!-- The Xikki Brief -->
+        <div class="venture-card reveal tilt-card">
+          <div class="venture-meta">
+            <span class="venture-status status-live">Live</span>
+            &nbsp;·&nbsp; Newsletter
+          </div>
+          <h3>The Xikki Brief</h3>
+          <p>Future-proof your startup with AI + Web3 in 5 minutes. Weekly insights on AI agents, blockchain, DeFi, and foodtech — written for African builders and global innovators.</p>
+          <div class="venture-tags">
+            <span>Content</span>
+            <span>AI</span>
+            <span>Web3</span>
+            <span>Foodtech</span>
+            <span>DeFi</span>
+          </div>
+          <div class="venture-links">
+            <a href="https://thexikkibrief.substack.com" target="_blank" class="venture-link">Subscribe →</a>
+          </div>
+        </div>
+
+        <!-- @Paiye_Bot -->
+        <div class="venture-card reveal reveal-delay-1 tilt-card">
+          <div class="venture-meta">
+            <span class="venture-status status-live">Live</span>
+            &nbsp;·&nbsp; Telegram Bot
+          </div>
+          <h3>@Paiye_Bot</h3>
+          <p>Personal job match engine for remote roles open to Nigeria. Scrapes 5+ job boards, scores matches against your resume with AI confidence ratings, and delivers daily alerts at 7AM WAT.</p>
+          <div class="venture-tags">
+            <span>Node.js</span>
+            <span>Telegram API</span>
+            <span>Web Scraping</span>
+            <span>AI Scoring</span>
+            <span>Cron</span>
+          </div>
+          <div class="venture-links">
+            <a href="https://t.me/Paiye_Bot" target="_blank" class="venture-link">Open Bot →</a>
+          </div>
+        </div>
+
+        <!-- Zareb -->
+        <div class="venture-card reveal tilt-card">
+          <div class="venture-meta">
+            <span class="venture-status status-beta">Beta</span>
+            &nbsp;·&nbsp; Foodtech
+          </div>
+          <h3>Zareb</h3>
+          <p>AI compliance document checker for African foodtech founders exporting to EU/UK markets. Scans regulations, flags gaps, and generates remediation plans.</p>
+          <div class="venture-tags">
+            <span>AI</span>
+            <span>Compliance</span>
+            <span>Foodtech</span>
+            <span>EU Regs</span>
+            <span>Document AI</span>
+          </div>
+          <div class="venture-links">
+            <a href="https://github.com/xi-kki/zareb" target="_blank" class="venture-link-gh">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Floe -->
+        <div class="venture-card reveal reveal-delay-1 tilt-card">
+          <div class="venture-meta">
+            <span class="venture-status status-building">Building</span>
+            &nbsp;·&nbsp; Sui Blockchain
+          </div>
+          <h3>Floe</h3>
+          <p>Trustless AI agent escrow on Sui with on-chain verification and dispute resolution. Smart contracts in Move language for secure agent-to-agent transactions.</p>
+          <div class="venture-tags">
+            <span>Move</span>
+            <span>Sui</span>
+            <span>Smart Contracts</span>
+            <span>Escrow</span>
+            <span>Web3</span>
+          </div>
+          <div class="venture-links">
+            <a href="https://github.com/xi-kki/Floe" target="_blank" class="venture-link-gh">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Kraiiv -->
+        <div class="venture-card reveal reveal-delay-2 tilt-card">
+          <div class="venture-meta">
+            <span class="venture-status status-building">Building</span>
+            &nbsp;·&nbsp; Wellness
+          </div>
+          <h3>Kraiiv</h3>
+          <p>Wellness rewards platform for Africa — habit tracking, challenges, and tokenized incentives. Gamifying health and productivity with on-chain rewards.</p>
+          <div class="venture-tags">
+            <span>Web3</span>
+            <span>Gamification</span>
+            <span>Wellness</span>
+            <span>Tokens</span>
+            <span>DeFi</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="section-label">About</p>
+          <h2>Building at the intersection of AI, Web3, and African innovation</h2>
+          <div class="about-text">
+            <p>I'm Adeleke Isaac (Xi-kki), a builder creating at the frontier of AI agents, blockchain protocols, and foodtech tools — with Africa as both my starting point and my focus market.</p>
+            <p>My work spans the full stack: from smart contracts in Solidity and Move, to AI-powered bots and job engines, to content that helps founders navigate AI and Web3. I believe the next wave of innovation will come from combining AI agency with onchain trust — and I'm building the primitives to make that happen.</p>
+            <p>I've shipped across 0G (VERIDD), Sui (Floe), Telegram (@Paiye_Bot), and Substack (The Xikki Brief). My projects are driven by a single question: <em>how can I build something useful today that compounds into infrastructure tomorrow?</em></p>
+          </div>
+          <div class="about-actions">
+            <a href="https://github.com/xi-kki" target="_blank" class="btn btn-primary magnetic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
+              GitHub Profile
+            </a>
+            <a href="https://thexikkibrief.substack.com" target="_blank" class="btn btn-ghost magnetic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+              The Xikki Brief
+            </a>
+          </div>
+        </div>
+
+        <div class="about-sidebar reveal reveal-right">
+          <div class="stat-card tilt-card">
+            <div class="stat-number" data-target="12" data-suffix="+">0</div>
+            <div class="stat-label">Projects Shipped</div>
+          </div>
+          <div class="stat-card tilt-card">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Blockchains Deployed On</div>
+          </div>
+          <div class="stat-card tilt-card">
+            <div class="stat-number" data-target="3" data-suffix="×">0</div>
+            <div class="stat-label">Active Products Running</div>
+          </div>
+          <div class="about-link-list">
+            <a href="https://github.com/xi-kki/veridd" target="_blank" class="about-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              VERIDD — Onchain Reputation for AI
+              <span class="arrow">→</span>
+            </a>
+            <a href="https://thexikkibrief.substack.com" target="_blank" class="about-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46z"/></svg>
+              The Xikki Brief Newsletter
+              <span class="arrow">→</span>
+            </a>
+            <a href="https://t.me/Paiye_Bot" target="_blank" class="about-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              @Paiye_Bot on Telegram
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Writing ===== -->
+  <section class="section" id="writing">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Writing</p>
+        <h2>The Xikki Brief</h2>
+        <p class="section-desc">AI + Web3 insights to future-proof your startup — in 5 minutes.</p>
+      </div>
+      <div class="writing-grid">
+        <a class="writing-card reveal tilt-card"
+          href="https://thexikkibrief.substack.com/p/the-bitcoin-odyssey-from-cowries" target="_blank" rel="noopener">
+          <div class="writing-source">Apr 7, 2026</div>
+          <h3>The Bitcoin Odyssey: From Cowries to Web3</h3>
+          <p>How Nigeria jumped from cowrie shells to cryptocurrency in one generation — and what it means for the future of money in Africa.</p>
+          <span class="writing-link">Read on Substack →</span>
+        </a>
+        <a class="writing-card reveal reveal-delay-1 tilt-card"
+          href="https://thexikkibrief.substack.com/p/how-telegram-went-from-web2-to-web3" target="_blank" rel="noopener">
+          <div class="writing-source">Jan 9, 2026</div>
+          <h3>How Telegram Went from Web2 to Web3 in 4 Steps</h3>
+          <p>Telegram's evolution from messaging app to Web3 powerhouse — TON, mini apps, and the path to mass adoption.</p>
+          <span class="writing-link">Read on Substack →</span>
+        </a>
+        <a class="writing-card reveal tilt-card"
+          href="https://thexikkibrief.substack.com/p/wallet-me-into-web3" target="_blank" rel="noopener">
+          <div class="writing-source">Nov 21, 2025</div>
+          <h3>Wallet-Me-Into-Web3?</h3>
+          <p>A beginner's guide to Web3 wallets — what they are, how they work, and why every African builder needs one.</p>
+          <span class="writing-link">Read on Substack →</span>
+        </a>
+      </div>
+      <div class="writing-cta reveal">
+        <a href="https://thexikkibrief.substack.com" target="_blank" class="btn-ghost-large">
+          Subscribe to The Xikki Brief →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Experience / Timeline ===== -->
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Journey</p>
+        <h2>Building in Public</h2>
+        <p class="section-desc">From first commits to shipping for hackathons and building real products.</p>
+      </div>
+      <div class="milestones-grid">
+
+        <div class="milestone-card featured reveal tilt-card" data-year="2026">
+          <div class="milestone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="milestone-content">
+            <div class="milestone-year-badge">2026 &nbsp;·&nbsp; Current</div>
+            <h3>VERIDD — Won 0G Zero Cup</h3>
+            <p>Built and shipped VERIDD, an onchain reputation system for AI agents using all 4 0G products. Submitted to the Zero Cup global vibe coding tournament. Demo live at veridd.vercel.app.</p>
+          </div>
+        </div>
+
+        <div class="milestone-card reveal tilt-card" data-year="2026">
+          <div class="milestone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="milestone-year-badge">2026</div>
+          <h3>Launched The Xikki Brief</h3>
+          <p>Started a weekly Substack newsletter covering AI + Web3 for startup founders. 5 published posts, 47 notes in queue, auto-scheduler running through Sep 2026.</p>
+        </div>
+
+        <div class="milestone-card reveal reveal-delay-1 tilt-card" data-year="2026">
+          <div class="milestone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </div>
+          <div class="milestone-year-badge">2026</div>
+          <h3>Built @Paiye_Bot</h3>
+          <p>Telegram job match engine that scrapes 5+ remote job boards, scores matches against 3 resume profiles, and delivers daily alerts. 1K+ commands served.</p>
+        </div>
+
+        <div class="milestone-card reveal tilt-card" data-year="2025">
+          <div class="milestone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <div class="milestone-year-badge">2025</div>
+          <h3>Started Web3 Journey on Sui</h3>
+          <p>Began building on Sui blockchain with Move language. Created Floe — trustless AI agent escrow with on-chain dispute resolution. Deep dive into Sui objects, PTBs, and zkLogin.</p>
+        </div>
+
+        <div class="milestone-card reveal reveal-delay-1 tilt-card" data-year="2025">
+          <div class="milestone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <div class="milestone-year-badge">2025</div>
+          <h3>Launched Foodtech & Compliance Tools</h3>
+          <p>Built Zareb — AI compliance checker for African foodtech founders. Started foodtech AI agent projects and GTM playbook for the African market.</p>
+        </div>
+
+        <div class="milestone-card origin reveal tilt-card" data-year="2024">
+          <div class="milestone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="milestone-content">
+            <div class="milestone-year-badge">2024 &nbsp;·&nbsp; The Beginning</div>
+            <h3>Started Building with AI</h3>
+            <p>Began exploring prompt engineering, AI agents, and vibe coding. Built first AI-powered tools, discovered the power of AI-assisted development, and never looked back.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <p class="section-label">Contact</p>
+        <h2>Let's Build</h2>
+        <p class="contact-desc">Open to collaborations, hackathons, speaking, or just a good conversation about AI agents and Web3.</p>
+        <div class="contact-social">
+          <a href="mailto:xikki.locker@gmail.com" class="social-btn social-btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+          <a href="https://github.com/xi-kki" target="_blank" class="social-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
+            GitHub
+          </a>
+          <a href="https://x.com/xikkibrief" target="_blank" class="social-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X / Twitter
+          </a>
+          <a href="https://thexikkibrief.substack.com" target="_blank" class="social-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+            Substack
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p class="footer-name">Xi-kki <span class="footer-real">/ Adeleke Isaac</span></p>
+          <p class="footer-tagline">Building AI agents, Web3 protocols & foodtech tools for Africa.</p>
+        </div>
+        <div class="footer-right">
+          <p class="footer-copy">© 2026 Xi-kki</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
