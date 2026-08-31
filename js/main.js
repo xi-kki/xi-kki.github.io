@@ -1,7 +1,19 @@
 // ============================================================
+// Xi-kki Portfolio — Analytics helper (GA4 + Plausible)
+// ============================================================
+// provider-agnostic: sends to gtag (GA4) and plausible if present
+function track(eventName, params = {}) {
+  try { if (typeof gtag === 'function') gtag('event', eventName, params); } catch (e) {}
+  try { if (typeof plausible === 'function') plausible(eventName, { props: params }); } catch (e) {}
+  // dev log on localhost
+  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    console.debug('[track]', eventName, params);
+  }
+}
+
+// ============================================================
 // Xi-kki Portfolio — Interactive Effects
 // ============================================================
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // ─── Custom Cursor ───
@@ -71,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const next = current === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
     localStorage.setItem('xi-kki-theme', next);
+    track('theme_toggle', { theme: next });
   });
 
   // ─── Typewriter Effect ───
@@ -275,18 +288,83 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ─── Smooth Nav Links (no default anchor jump) ───
+  // ─── Smooth Nav Links (no default anchor jump) + nav tracking ───
   document.querySelectorAll('.nav-links a, .nav-cta, .hero-actions a').forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
+      const label = (link.textContent || href || '').trim().slice(0, 40);
       if (href && href.startsWith('#')) {
         e.preventDefault();
         const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+        track('nav_click', { label: label || href, href });
+      } else if (href) {
+        track('nav_click', { label: label || href, href });
+      }
+      if (link.closest('.hero-actions')) track('hero_cta_click', { label, href });
+    });
+  });
+
+  // ─── Project / Venture tracking ───
+  document.querySelectorAll('.venture-links a, .venture-card a').forEach(a => {
+    a.addEventListener('click', () => {
+      const card = a.closest('.venture-card');
+      const project = card ? (card.querySelector('h3')?.textContent || 'unknown').trim() : 'unknown';
+      const type = a.classList.contains('venture-link-gh') ? 'github' : 'live_demo';
+      const href = a.getAttribute('href') || '';
+      track('project_click', { project, type, href });
+    });
+  });
+
+  // ─── Writing / Newsletter tracking ───
+  document.querySelectorAll('.writing-card, .writing-cta a, a[href*="substack.com"]').forEach(a => {
+    a.addEventListener('click', () => {
+      const title = a.querySelector('h3')?.textContent?.trim() || a.textContent.trim().slice(0, 50) || 'substack';
+      track('writing_click', { title, href: a.getAttribute('href') || '' });
+    });
+  });
+
+  // ─── Contact / Social tracking ───
+  document.querySelectorAll('.contact-social a, .social-btn, .about-link').forEach(a => {
+    a.addEventListener('click', () => {
+      const label = (a.textContent || a.getAttribute('href') || '').trim().slice(0, 50);
+      const href = a.getAttribute('href') || '';
+      let channel = 'other';
+      if (href.includes('mailto:')) channel = 'email';
+      else if (href.includes('github.com')) channel = 'github';
+      else if (href.includes('x.com') || href.includes('twitter')) channel = 'x_twitter';
+      else if (href.includes('substack')) channel = 'substack';
+      else if (href.includes('t.me') || href.includes('telegram')) channel = 'telegram';
+      track('contact_click', { channel, label, href });
+    });
+  });
+
+  // ─── Outbound link tracking (catch-all) ───
+  document.querySelectorAll('a[href^="http"]').forEach(a => {
+    if (a.hostname === location.hostname) return;
+    a.addEventListener('click', () => {
+      // avoid double-firing if already tracked above
+      if (a.closest('.venture-card') || a.closest('.contact-social') || a.closest('.about-link') || a.closest('.writing-grid')) return;
+      track('outbound_click', { href: a.getAttribute('href') || '', label: (a.textContent || '').trim().slice(0, 50) });
+    });
+  });
+
+  // ─── Scroll depth (25/50/75/100) ───
+  const depthMarks = [25, 50, 75, 100];
+  const firedDepth = new Set();
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+    depthMarks.forEach(mark => {
+      if (scrolled >= mark && !firedDepth.has(mark)) {
+        firedDepth.add(mark);
+        track('scroll_depth', { percent: mark });
       }
     });
+  }, { passive: true });
+
+  // ─── Time on page (heartbeat at 30s, 60s, 180s) ───
+  [30, 60, 180].forEach(sec => {
+    setTimeout(() => track('time_on_page', { seconds: sec }), sec * 1000);
   });
 
   console.log('🚀 Xi-kki Portfolio loaded. Built with ❤️');
