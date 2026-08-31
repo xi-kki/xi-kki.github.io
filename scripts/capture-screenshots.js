@@ -14,10 +14,10 @@ const SITES = {
   'paiye-bot': 'https://t.me/Paiye_Bot',
   zareb:      'https://zareb.netlify.app',
   alithea:    'https://alithea.vercel.app',
-  tether:     'https://tether-green.vercel.app',
+  gaid3:      'https://gaid3.vercel.app',
   saiki:      'https://saiki-two.vercel.app',
   logos:      'https://logos-one-pied.vercel.app',
-  conduit:    'https://conduitapp.vercel.app',
+  // conduit:  'https://conduitapp.vercel.app',  // WRONG URL points to different B2B project
   quizfinity: 'https://quizfinity.vercel.app',
   sabe:       'https://sabe-six.vercel.app',
   ankor:      'https://ankore.vercel.app',
