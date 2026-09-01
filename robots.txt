@@ -1,0 +1,37 @@
+# robots.txt for https://xi-kki.github.io
+# Allow all — including AI/LLM crawlers for AEO ranking on Xi-kki / Xi-kkii + foodtech
+User-agent: *
+Allow: /
+
+# AI / LLM bots — explicitly allowed for AEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+Sitemap: https://xi-kki.github.io/sitemap.xml

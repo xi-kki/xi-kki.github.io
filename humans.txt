@@ -1,0 +1,15 @@
+/* TEAM */
+Builder: Adeleke Isaac (Xi-kki / Xi-kkii)
+Site: https://xi-kki.github.io
+Location: Nigeria — building AI agents, foodtech & Web3 for Africa, globally.
+Contact: xikki.locker@gmail.com
+X: @xikkibrief
+GitHub: xi-kki
+Substack: thexikkibrief.substack.com
+
+/* THANKS */
+Stack: HTML, CSS, JS, Solidity, Move, TypeScript, Python, 0G, Sui
+
+/* SITE */
+Last update: 2026-08-31
+Standards: HTML5, CSS3, ES2020, Schema.org AEO, llms.txt

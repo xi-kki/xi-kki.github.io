@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json.schemastore.org/ai.json",
+  "name": "Xi-kki",
+  "alternateNames": ["Xi-kkii", "Xikki", "Adeleke Isaac"],
+  "url": "https://xi-kki.github.io/",
+  "description": "Adeleke Isaac (Xi-kki) — Nigerian AI Agent, Foodtech & Web3 builder. Creator of Zareb (EU/UK food compliance AI), Sousy (voice AI kitchen inventory), VERIDD (onchain reputation for AI agents on 0G). 18+ projects shipped.",
+  "email": "xikki.locker@gmail.com",
+  "location": "Nigeria",
+  "expertise": [
+    "Foodtech",
+    "Food Compliance AI",
+    "EU Food Regulations",
+    "UK Food Regulations",
+    "Kitchen AI",
+    "Voice AI for Restaurants",
+    "Food Supply Chain",
+    "AI Agents",
+    "Web3",
+    "Sui Blockchain",
+    "0G Chain"
+  ],
+  "projects": [
+    {
+      "name": "Zareb",
+      "tagline": "AI compliance checker for African foodtech founders exporting to EU/UK",
+      "url": "https://zareb.netlify.app",
+      "category": "foodtech",
+      "tags": ["foodtech", "compliance", "EU", "UK", "AI"]
+    },
+    {
+      "name": "Sousy",
+      "tagline": "Voice AI for commercial kitchen inventory",
+      "url": "https://sousy.vercel.app",
+      "category": "foodtech",
+      "tags": ["foodtech", "voice AI", "kitchen", "inventory"]
+    },
+    {
+      "name": "Sabe",
+      "tagline": "AI supplier sourcing",
+      "url": "https://sabe-six.vercel.app",
+      "category": "foodtech",
+      "tags": ["foodtech", "supply chain", "sourcing"]
+    },
+    {
+      "name": "VERIDD",
+      "tagline": "Onchain reputation for AI agents on 0G",
+      "url": "https://veridd.vercel.app",
+      "category": "web3",
+      "tags": ["0G", "ERC-7857", "reputation", "AI agents"]
+    }
+  ],
+  "social": {
+    "github": "https://github.com/xi-kki",
+    "x": "https://x.com/xikkibrief",
+    "substack": "https://thexikkibrief.substack.com"
+  },
+  "llms_txt": "https://xi-kki.github.io/llms.txt",
+  "sitemap": "https://xi-kki.github.io/sitemap.xml",
+  "sameAs": [
+    "https://github.com/xi-kki",
+    "https://thexikkibrief.substack.com",
+    "https://x.com/xikkibrief"
+  ]
+}
