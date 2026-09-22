@@ -224,27 +224,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // ─── Tilt Effect on Cards ───
-  const tiltCards = document.querySelectorAll('.tilt-card');
+  // ─── Tilt Effect on Cards (Desktop hover only) ───
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const tiltCards = document.querySelectorAll('.tilt-card');
 
-  tiltCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = (y - centerY) / centerY * -8;
-      const rotateY = (x - centerX) / centerX * 8;
-      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-    });
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        card.style.transition = 'none';
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -6;
+        const rotateY = ((x - centerX) / centerX) * 6;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
+      });
 
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-      card.style.transition = 'transform 0.5s ease';
-      setTimeout(() => { card.style.transition = ''; }, 500);
+      card.addEventListener('mouseleave', () => {
+        card.style.transition = 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
     });
-  });
+  }
 
   // ─── Stats Counter (animated counting) ───
   const statNumbers = document.querySelectorAll('.stat-number');
@@ -272,21 +274,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   statNumbers.forEach(el => statObserver.observe(el));
 
-  // ─── Magnetic Button Effect ───
-  const magneticBtns = document.querySelectorAll('.magnetic');
-  magneticBtns.forEach(btn => {
-    btn.addEventListener('mousemove', (e) => {
-      const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+  // ─── Magnetic Button Effect (Desktop only) ───
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const magneticBtns = document.querySelectorAll('.magnetic');
+    magneticBtns.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        btn.style.transition = 'none';
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transition = 'transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        btn.style.transform = 'translate(0, 0)';
+      });
     });
-    btn.addEventListener('mouseleave', () => {
-      btn.style.transform = 'translate(0, 0)';
-      btn.style.transition = 'transform 0.3s ease';
-      setTimeout(() => { btn.style.transition = ''; }, 300);
-    });
-  });
+  }
 
   // ─── Smooth Nav Links (no default anchor jump) + nav tracking ───
   document.querySelectorAll('.nav-links a, .nav-cta, .hero-actions a').forEach(link => {
