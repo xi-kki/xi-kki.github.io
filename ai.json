@@ -3,7 +3,7 @@
   "name": "Xi-kki",
   "alternateNames": ["Xi-kkii", "Xikki", "Adeleke Isaac"],
   "url": "https://xi-kki.github.io/",
-  "description": "Adeleke Isaac (Xi-kki) — Nigerian AI Agent, Foodtech & Web3 builder. Creator of Zareb (EU/UK food compliance AI), Sousy (voice AI kitchen inventory), VERIDD (onchain reputation for AI agents on 0G). 18+ projects shipped.",
+  "description": "Adeleke Isaac (Xi-kki) — Nigerian AI Agent, Foodtech & Web3 builder. Creator of Zareb, Sousy, Ambrosia, Floe, Talass, Gaid3, Alithea, VERIDD. 22+ projects shipped across 5 blockchains.",
   "email": "xikki.locker@gmail.com",
   "location": "Nigeria",
   "expertise": [
@@ -28,6 +28,13 @@
       "tags": ["foodtech", "compliance", "EU", "UK", "AI"]
     },
     {
+      "name": "Ambrosia",
+      "tagline": "Zero-sugar beverage formulation lab powered by Dr. Bev AI copilot",
+      "url": "https://github.com/xi-kki/ambrosia",
+      "category": "foodtech",
+      "tags": ["foodtech", "beverage", "AI SDK", "Drizzle", "Next.js"]
+    },
+    {
       "name": "Sousy",
       "tagline": "Voice AI for commercial kitchen inventory",
       "url": "https://sousy.vercel.app",
@@ -35,11 +42,32 @@
       "tags": ["foodtech", "voice AI", "kitchen", "inventory"]
     },
     {
-      "name": "Sabe",
-      "tagline": "AI supplier sourcing",
-      "url": "https://sabe-six.vercel.app",
-      "category": "foodtech",
-      "tags": ["foodtech", "supply chain", "sourcing"]
+      "name": "Floe",
+      "tagline": "Trustless AI Agent Escrow & service registry on Sui and Walrus",
+      "url": "https://github.com/xi-kki/floe",
+      "category": "web3",
+      "tags": ["Sui", "Move", "Walrus", "AI Agents", "Escrow"]
+    },
+    {
+      "name": "Talass",
+      "tagline": "Real-time multi-chain Web3 wallet and DeFi portfolio dashboard",
+      "url": "https://talass.vercel.app",
+      "category": "web3",
+      "tags": ["Sui", "Solana", "EVM", "DeFi", "Portfolio"]
+    },
+    {
+      "name": "Gaid3",
+      "tagline": "Sovereign Web3 AI companion with Walrus memory and pre-flight safety sandbox",
+      "url": "https://gaid3.vercel.app",
+      "category": "web3",
+      "tags": ["Sui", "Walrus", "zkLogin", "AI Agent", "Security"]
+    },
+    {
+      "name": "Alithea",
+      "tagline": "10-Game Memory Training Arena on Sui blockchain",
+      "url": "https://alitia.vercel.app",
+      "category": "web3",
+      "tags": ["Sui", "Move", "Gaming", "Cognitive"]
     },
     {
       "name": "VERIDD",

@@ -24,7 +24,10 @@
 - VERIDD — Onchain reputation for AI agents (0G Chain, Storage, Compute, ERC-7857) — https://veridd.vercel.app
 - @Paiye_Bot — Telegram job match engine for remote roles open to Nigeria — https://t.me/Paiye_Bot
 - The Xikki Brief — Weekly AI + Web3 newsletter for founders — https://thexikkibrief.substack.com
-- Alithea, Conduit, Droplet, Tether, Talass, etc. — https://xi-kki.github.io/#projects
+- Ambrosia — AI zero-sugar beverage formulation lab (Dr. Bev copilot) — https://github.com/xi-kki/ambrosia
+- Floe — Trustless AI agent escrow on Sui & Walrus — https://github.com/xi-kki/floe
+- Talass — Multi-chain Web3 DeFi portfolio dashboard (Sui, Solana, EVM) — https://talass.vercel.app
+- Gaid3, Alithea, Droplet, Saiki, Negotia8, Logos, Conduit, S4F3, Tether, Quizfinity — https://xi-kki.github.io/#projects
 
 ## Writing on Foodtech & AI
 - The Xikki Brief: https://thexikkibrief.substack.com — search "foodtech", "AI agents", "Web3"
