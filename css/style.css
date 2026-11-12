@@ -1163,3 +1163,11 @@ ul { list-style: none; }
 .explore-go { font-weight: 600; color: var(--accent); font-size: 14px; }
 @media (max-width: 960px) { .explore-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .explore-grid { grid-template-columns: 1fr; } }
+
+/* ─── Certifications (about sidebar) ─── */
+.cert-card { margin-top: 16px; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.cert-title { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+.cert-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.cert-list li { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--text); }
+.cert-list em { font-style: normal; color: var(--text-muted); white-space: nowrap; }
+.contact-social { flex-wrap: wrap; }
